@@ -1,0 +1,5 @@
+**1. Axis and the Future of Provable Software: Why Formal Verification Becomes Practical**
+
+For decades, formal verification has been the discipline everyone agrees we *need*, yet almost no real-world software is built with it. The problem is structural: today’s languages, runtimes, and ecosystems were not designed for proof. They allow nondeterminism, hidden side effects, ad-hoc mutation, aliasing, and state models that explode combinatorially under analysis. Axis approaches the problem from first principles: what if a language were built so that proofs are not an afterthought, but a natural consequence of the semantics?
+
+This article introduces Axis as a new foundation for provable software — a semantics-first language whose core properties make verification tractable rather than heroic. We show how immutability, deterministic evaluation, explicit dependencies, and a minimal core create an environment where proofs scale, tools become simpler, and AI-generated code can be validated rather than blindly trusted. The future of provable software is not about better proof assistants — it’s about better semantics. Axis is built for that future.

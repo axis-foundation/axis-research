@@ -1,0 +1,5 @@
+**3. Designing a Language *With* AI, Not *For* AI: The Axis Experiment**
+
+Axis is the first programming language intentionally co-designed with an AI collaborator. Instead of creating a language that merely *accommodates* AI tools, Axis explores what happens when AI actively helps shape the semantics, structure, and conceptual boundaries of the language itself. This article discusses the unique design process that emerged: the human applies constraints, metaphors, and philosophical direction, while the AI proposes structures, simplifications, and alternative formulations that humans would rarely invent on their own.
+
+We argue that AI-native languages — those co-evolving with machine reasoning capabilities — represent the next major leap in programming language history. Designing *with* AI allows us to explore far larger design spaces, identify unnecessary complexity earlier, and converge on clean semantics faster than human-only language design ever allowed. Axis is not just an experiment in programming—it is an experiment in a new form of collaborative intelligence. This article documents what we learned.

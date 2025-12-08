@@ -1,0 +1,95 @@
+\documentclass[11pt]{article}
+
+% ------------------------------------------------------------
+% Packages
+% ------------------------------------------------------------
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+
+% Pandoc table support
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\usepackage{array}
+
+\usepackage{framed}
+\usepackage{fancyvrb}
+
+\usepackage{color}
+\usepackage{listings}
+
+$highlighting-macros$
+
+% Pandoc list compatibility
+\providecommand{\tightlist}{
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
+}
+
+% ------------------------------------------------------------
+% Layout tweaks
+% ------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\thepage}
+
+\setcounter{secnumdepth}{0}
+
+% ------------------------------------------------------------
+% Title Page Setup
+% ------------------------------------------------------------
+
+\newcommand{\makeaxistitle}{
+\clearpage
+\thispagestyle{empty}
+
+{\centering
+
+{\Huge\bfseries $title$ \par}
+\vspace{1cm}
+
+{\Large $for(author)$$author$$sep$ \\ $endfor$ \par}
+\vspace{0.5cm}
+
+\rule{\linewidth}{0.6pt}\vspace{0.5cm}
+
+{\large\bfseries Abstract}\par
+\vspace{0.5cm}
+
+{\small
+$abstract$
+}
+
+\par}
+}
+
+% ------------------------------------------------------------
+% Document
+% ------------------------------------------------------------
+\begin{document}
+
+% Title Page
+\makeaxistitle
+
+% Table of Contents
+$if(toc)$
+{
+\hypersetup{linkcolor=black}
+\tableofcontents
+\newpage
+}
+$endif$
+
+% Body
+$body$
+
+\end{document}

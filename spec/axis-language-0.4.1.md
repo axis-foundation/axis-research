@@ -68,7 +68,7 @@ Case-sensitive ASCII.
 
 ### **Literals**
 
-* `Int`: `0`, `42`
+* `Int`: `0`, `42
 * `Float`: `3.14`
 * `Bool`: `true`, `false`
 * `String`: `"..."` (ASCII for now)

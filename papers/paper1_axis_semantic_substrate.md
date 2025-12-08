@@ -6,15 +6,13 @@
 
 **Axis: A Semantic Substrate for AI‑Native Computation**
 
-# **Authors**
+# **Author**
 
-Chris Taylor  (Axis Founder and Chief Architect) 
-Axis Foundation (proposed)  
-Cairns, Australia  
-Email: chris@axis-foundation.org  
-https://github.com/axis-research
+Chris Taylor
 
-AI Co‑Designer: ChatGPT (OpenAI)
+Email: chris@axis-foundation.org
+
+https://github.com/axis-foundation/axis-research
 
 ---
 
@@ -33,7 +31,7 @@ The core contributions of this paper are:
 
 This paper represents the conceptual foundation for a broader research program that includes formal semantics, immutable semantic contract catalogues, cross‑language bridges, system‑level semantics, and AI reasoning models.
 
-#
+---
 
 # **1. Introduction**
 
@@ -661,7 +659,6 @@ Axis is a step toward that future — a future where AI and humans collaborate o
 
 * Hoare, C. A. R. (1969). *An Axiomatic Basis for Computer Programming.*
 * Lamport, L. (1998). *The Part-Time Parliament.* (optional)
-
 
 ---
 

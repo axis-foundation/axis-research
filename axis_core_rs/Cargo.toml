@@ -1,0 +1,12 @@
+[package]
+name = "axis-core-rs"
+version = "0.1.0"
+edition = "2021"
+description = "Axis Core semantic engine in Rust (immutable, parallel, runtime-agnostic)."
+license = "MIT"
+
+[dependencies]
+im = { version = "15", features = ["serde"] }  # persistent immutable collections
+rayon = "1.10"     # data-parallel execution
+thiserror = "1"    # nicer error types
+serde = { version = "1", features = ["derive"] }  # for debugging/printing values

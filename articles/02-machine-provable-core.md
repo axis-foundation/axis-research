@@ -1,0 +1,5 @@
+**2. The Path to a Machine-Provable Core: How We Make Semantics Rigid Enough for Proof**
+
+If Axis is to serve as a universal semantic substrate, it must begin with a mathematically sharp foundation. This article describes the process of distilling Axis down to a small, deterministic, declarative core that machines can prove equivalent, safe, and total. It explores the philosophical and technical steps required to remove ambiguity, collapse redundant constructs, and converge on a minimal set of primitives that capture the full expressive power of the language without introducing verification complexity.
+
+We explain how shrinking the language — rather than extending it — is what makes machine-checkable reasoning possible. By designing every construct in service of provability, Axis avoids the pitfalls that make modern languages unverifiable in practice. The result is a core that is not merely analyzable, but *designed* for formal methods and AI-based proof tooling. This article lays out the path from messy real-world programming models to a clean, proof-ready semantic core.

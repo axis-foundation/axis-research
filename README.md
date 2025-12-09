@@ -1,78 +1,162 @@
-# Axis (Draft)
-### A human–AI co-designed logic language experiment
+# Axis — A Semantic Substrate for AI-Native Computation  
+### A human–AI co-designed experiment in semantic language design
 
-Axis is an experiment in co-designing a logic language with an AI partner, exploring what emerges when humans guide semantics and intent while AI explores structure and patterns.
+Axis explores a foundational question:
 
-Most programming languages—functional, imperative, or logic—are shaped around human intuition. Axis asks a different question:
+> **What does a programming language look like when designed not only for humans, but also for AI systems as first-class collaborators?**
 
-> **What does a programming language look like when an AI participates directly in its design as a collaborator rather than a tool?**
+Modern programming languages were shaped by decades of human ergonomics and historical constraints. Axis takes a different path: it introduces a **minimal, deterministic semantic layer** that AI systems can reason about cleanly, translate reliably, and execute consistently across multiple host languages.
 
-Axis is small, declarative, and designed with an emphasis on simple semantics, determinism, and clarity. The goal is to create a language that is understandable to humans but not centered exclusively on human cognitive preferences—one that feels natural for an AI system to reason about.
-
----
-
-## 🌱 Design Approach
-
-The project follows a collaborative process where:
-
-**The human role** is to  
-- define intent  
-- enforce constraints  
-- shape semantics  
-- refine and clarify  
-- push for coherence and rigor  
-
-**The AI role** is to  
-- propose structures  
-- generate variations  
-- explore alternative semantics  
-- surface non-human patterns  
-- iterate at high speed  
-
-Axis is the structure that emerged where these two reasoning styles overlap.
+Axis is not a new general-purpose programming language.  
+It is a **semantic substrate** — a stable representation of computational intent designed for AI-native reasoning.
 
 ---
 
-## 📘 Specification
+# 🚀 1. What Axis Is
 
-The draft language specification (v0.4.1) can be found here:
+Axis consists of three core ideas:
 
-➡️ **[`spec/axis-language-v0.4.1.md`](https://github.com/christaylor98/axis/blob/main/spec/axis-language-0.4.1.md)**
+### **1. A minimal, deterministic semantic language**  
+A formally defined core that avoids ambiguity and drift, giving AI a clean and consistent target.
 
-It includes:
-- syntax  
-- expression forms  
-- types  
-- evaluation model  
-- examples  
-- design rationale  
+### **2. A global immutable function registry**  
+A long-term vision for permanent, versioned, cross-language semantics.  
+(Explored in later papers.)
 
-This is exploratory work; everything is open to critique and revision.
+### **3. Deterministic multi-language execution**  
+Axis programs can be rendered into Python, Rust, JavaScript, Go, and system-level semantics while preserving meaning.
 
----
-
-## 🧪 Status
-
-Axis is **early research**, not a finished language.  
-The focus at this stage is on the clarity, coherence, and usefulness of the core semantics.
-
-Feedback and discussion are welcome — especially from those with experience in:
-
-- logic languages  
-- PL design  
-- verification and proof systems  
-- AI reasoning  
-- semantics and type theory  
+Axis aims to become a **unifying semantic layer** for AI-generated code across ecosystems.
 
 ---
 
-## 🤝 Feedback
+# 🌱 2. A Human–AI Co-Designed Language Experiment
 
-If you have comments, ideas, or critique, please open an issue or start a discussion.  
-Thoughtful feedback at this stage is far more valuable than implementation work.
+Axis is also an experiment in **collaborative language design**.
+
+The human role:
+
+* define intent  
+* impose constraints  
+* shape semantics  
+* enforce coherence and rigor  
+
+The AI role:
+
+* explore structure  
+* propose variations  
+* refine patterns  
+* reason at high speed  
+
+Axis reflects where these two reasoning styles overlap.
+
+This project treats AI as a **co-designer**, not a tool — part of the research and part of the identity of the work.
 
 ---
 
-## 📜 License
+# 📘 3. Research Papers
 
-MIT
+Axis is being formalized through a sequence of foundational papers.  
+This repository includes **Paper 1**, which introduces the conceptual foundation.
+
+### **➡️ Paper 1: Axis — A Semantic Substrate for AI-Native Computation**  
+*(core concept paper; recommended starting point)*
+
+Future papers will cover:
+
+1. Axis Core Language Specification  
+2. Immutable Contract Registry  
+3. Cross-Language Bridging Architecture  
+4. Axis Web Semantics  
+5. Axis OS & Infrastructure Semantics  
+6. Axis DB  
+7. AI Reasoning Model for Axis  
+
+---
+
+# 🔬 4. Early Language Specification (Prototype)
+
+Axis includes a prototype declarative language used to explore the minimal semantics:
+
+➡️ **[`spec/axis-language-v0.4.1.md`](spec/axis-language-v0.4.1.md)**
+
+This draft includes:
+
+* syntax  
+* expression forms  
+* types  
+* evaluation model  
+* examples  
+* design rationale  
+
+It is exploratory and will evolve as the semantic substrate stabilizes.
+
+---
+
+# 🧪 5. Status
+
+Axis is **early-stage research**.
+
+Current focus:
+
+- clarifying core semantics  
+- refining the AI–human co-design loop  
+- stabilizing the minimal language  
+- articulating the long-term semantic architecture  
+
+Feedback from researchers in PL, AI reasoning, formal methods, and systems design is highly welcome.
+
+---
+
+# 🔮 6. Long-Term Vision
+
+Axis aims to provide AI systems with:
+
+- a stable, deterministic language of thought  
+- a universal vocabulary of permanent functions  
+- a reproducible semantic substrate beneath all programming languages  
+- a consistent cross-language execution model  
+
+Future directions include:
+
+- contract registry  
+- bridging to multiple runtimes  
+- web semantics  
+- OS and infrastructure semantics  
+- deterministic distributed systems  
+- semantic databases  
+
+These areas remain exploratory and open.
+
+---
+
+# 🚫 7. Out of Scope for v0.4.x
+
+The early specification intentionally excludes:
+
+- runtime behaviour  
+- host-language integration  
+- tooling and compilers  
+- verification frameworks  
+- optimizations  
+
+The goal is to stabilize the semantics before moving outward.
+
+---
+
+# 🤝 8. Feedback & Discussion
+
+Thoughtful critique and conceptual discussion are far more valuable than implementation work at this stage.
+
+Please open an issue or start a discussion if you have:
+
+- questions  
+- suggestions  
+- critiques  
+- interest in collaboration  
+
+---
+
+# 📜 License
+
+MIT License. See `LICENSE` file for details.

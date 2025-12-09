@@ -78,7 +78,8 @@ Future papers will cover:
 
 Axis includes a prototype declarative language used to explore the minimal semantics:
 
-➡️ **[`spec/axis-language-v0.4.1.md`](spec/axis-language-v0.4.1.md)**
+➡️ **[`spec/axis-language-core-0.5.md`](spec/axis-language-core-0.5.md)**
+➡️ **[`spec/axis-language-surface-0.5.md`](spec/axis-language-surface-0.5.md)**
 
 This draft includes:
 

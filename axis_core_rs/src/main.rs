@@ -1,19 +1,24 @@
-use axis_core_rs::example::simple_lambda_example;
 use axis_core_rs::env::Env;
-    
-fn main() {    
+use axis_core_rs::eval;
+use axis_core_rs::example::simple_lambda_example;
+use axis_core_rs::Expr;
+
+use std::sync::Arc;
+
+fn main() {
     let env = Env::empty();
+    let exprs: Vec<Expr> = (0..100_000)
+        .map(|i| Expr::Int(i)) // trivial expression for now
+        .collect();
 
-    let expr = simple_lambda_example();
+    let start = std::time::Instant::now();
+    let _results = axis_core_rs::parallel::eval_many_parallel(&exprs, &env);
+    let dur_par = start.elapsed();
 
-    let result = axis_core_rs::eval::eval(&expr, &env);
+    let start_seq = std::time::Instant::now();
+    let _results_seq: Vec<_> = exprs.iter().map(|e| eval(e, &env)).collect();
+    let dur_seq = start_seq.elapsed();
 
-    match result {
-        Ok(value) => println!("Evaluation result: {:?}", value),
-        Err(err) => println!("Evaluation error: {}", err),
-    }
-
-    // The crate does not expose `axis_core_rs::eval::eval`; avoid calling it here
-    // and show the created expression's type instead to keep the program compilable.
-    // println!("Expression created (type = {})", std::any::type_name_of_val(&expr));
+    println!("Sequential: {:?}", dur_seq);
+    println!("Parallel: {:?}", dur_par);
 }

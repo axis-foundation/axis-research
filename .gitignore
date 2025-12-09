@@ -1,0 +1,44 @@
+# Rust/Cargo
+/axis_core_rs/target/
+**/*.rs.bk
+
+# If you're a library, you may want to track Cargo.lock.
+# For applications/binaries, ignoring it is common.
+Cargo.lock
+
+# Generated docs
+/axis_core_rs/target/doc/
+/axis_core_rs/doc/
+
+# Build/artifact files
+**/*.rlib
+**/*.so
+**/*.dylib
+**/*.dll
+*.exe
+*.profdata
+/axis_core_rs/incremental/
+
+# Cargo local config and registry cache
+/axis_core_rs/.cargo/
+/cargo-checksum.json
+
+# Editor/IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.sw?
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage/test output
+coverage/
+*.lcov
+*.profraw
+
+# Misc
+*.pid

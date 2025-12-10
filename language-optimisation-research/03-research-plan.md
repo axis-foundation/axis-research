@@ -99,6 +99,5 @@ We measure:
 Final report will answer:
 
 * Is Axis-Ultra strictly better for AI?
-* Is Axis Core better for humans?
 * Which core is easiest to prove correct?
 * Is there a clear Pareto frontier?

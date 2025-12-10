@@ -1,163 +1,120 @@
-# Axis — A Semantic Substrate for AI-Native Computation  
-### A human–AI co-designed experiment in semantic language design
+┌───────────────────────────────────────────────────────────────┐
+│                         SURFACE LAYERS                        │
+│ (Python, Rust, JS, SQL, CSS, UI logic, config, workflows...) │
+│                                                               │
+│ • Human-friendly syntax                                       │
+│ • Frameworks, libraries, domains                              │
+│ • What developers write today                                 │
+│                                                               │
+│ These all compile or translate INTO the Axis Semantic Core.   │
+└───────────────────────────────────────────────────────────────┘
+                                 │
+                                 ▼
+┌───────────────────────────────────────────────────────────────┐
+│                     AXIS SEMANTIC CORE                        │
+│        (The minimal meta-language: pure, explicit, stable)    │
+│                                                               │
+│ • Immutable data structures                                   │
+│ • Pure functions                                               │
+│ • Branching and composition                                   │
+│ • No loops, no mutation, no hidden behaviour                  │
+│ • Uniform representation for ALL domains                      │
+│                                                               │
+│ This layer contains ALMOST NO RUNTIME COMPLEXITY.             │
+│ Its job is to capture the *meaning* of programs.              │
+│                                                               │
+│ Everything here is small, deterministic, and analysis-friendly│
+└───────────────────────────────────────────────────────────────┘
+                                 │
+                                 ▼
+┌───────────────────────────────────────────────────────────────┐
+│                      BRIDGE LAYERS                            │
+│     (Runtime integration: Python, Rust, OS, DB, GPU, etc.)    │
+│                                                               │
+│ • Handles IO, files, sockets                                   │
+│ • Handles floats, number semantics                             │
+│ • Handles concurrency, blocking, async                         │
+│ • Calls out to OS, GPU, DB engines                             │
+│ • Implements foreign functions in real systems                 │
+│                                                               │
+│ THIS IS WHERE THE HARD WORK LIVES.                            │
+│                                                               │
+│ Complexity moves *down* into bridges so the Core stays clean. │
+│ We solve hard problems ONCE per platform, not in every library│
+└───────────────────────────────────────────────────────────────┘
+# Axis: A Universal Semantic Core
 
-Axis explores a foundational question:
 
-> **What does a programming language look like when designed not only for humans, but also for AI systems as first-class collaborators?**
+### Where this might go (and where it actually is)
 
-Modern programming languages were shaped by decades of human ergonomics and historical constraints. Axis takes a different path: it introduces a **minimal, deterministic semantic layer** that AI systems can reason about cleanly, translate reliably, and execute consistently across multiple host languages.
+Axis is early. Most of the interesting stuff is still theory and sketches, not working code. We’re a long way from “universal anything”.
 
-Axis is not a new general-purpose programming language.  
-It is a **semantic substrate** — a stable representation of computational intent designed for AI-native reasoning.
+That said, the ideas we’re playing with aren’t magic. They’re built out of things we already know work: small semantic cores, immutable functions, well-defined contracts, and the fact that AI tools behave better when you remove ambiguity.
 
----
+If Axis works the way we hope, it *could* open up some useful possibilities over time, for example:
 
-# 🚀 1. What Axis Is
+* **Better AI coding tools**
+  Because everything maps into one stable meta-language, AI doesn’t have to juggle 10 different mental models at once. In theory that should mean fewer hallucinations, fewer wrong APIs, and code changes that are closer to what you actually meant.
 
-Axis consists of three core ideas:
+* **Less dependency chaos**
+  The function registry model pushes towards “once a function is published, its behaviour doesn’t change”. That doesn’t magically fix the whole ecosystem, but it does give us a cleaner way to talk about versions and compatibility than “hope the library author didn’t break anything”.
 
-### **1. A minimal, deterministic semantic language**  
-A formally defined core that avoids ambiguity and drift, giving AI a clean and consistent target.
+* **Safer refactors and transformations**
+  If tools can work on a clear semantic layer instead of raw syntax trees, there’s a better chance they can refactor or translate code without quietly changing what it does.
 
-### **2. A global immutable function registry**  
-A long-term vision for permanent, versioned, cross-language semantics.  
-(Explored in later papers.)
+* **Cross-language movement**
+  In principle, if Python, Rust, SQL, CSS, UI logic and config all reduce to the same core shape, then moving behaviour between them (or sharing it) stops being science fiction and starts being a tooling problem.
 
-### **3. Deterministic multi-language execution**  
-Axis programs can be rendered into Python, Rust, JavaScript, Go, and system-level semantics while preserving meaning.
+* **More room for proper checking and proof**
+  A tiny, explicit core is easier to reason about than a huge, messy surface language. That doesn’t mean “formal proof of everything”, but it does mean some kinds of checking become more realistic.
 
-Axis aims to become a **unifying semantic layer** for AI-generated code across ecosystems.
-
----
-
-# 🌱 2. A Human–AI Co-Designed Language Experiment
-
-Axis is also an experiment in **collaborative language design**.
-
-The human role:
-
-* define intent  
-* impose constraints  
-* shape semantics  
-* enforce coherence and rigor  
-
-The AI role:
-
-* explore structure  
-* propose variations  
-* refine patterns  
-* reason at high speed  
-
-Axis reflects where these two reasoning styles overlap.
-
-This project treats AI as a **co-designer**, not a tool — part of the research and part of the identity of the work.
-
----
-
-# 📘 3. Research Papers
-
-Axis is being formalized through a sequence of foundational papers.  
-This repository includes **Paper 1**, which introduces the conceptual foundation.
-
-### **➡️ Paper 1: Axis — A Semantic Substrate for AI-Native Computation**  
-*(core concept paper; recommended starting point)*
-
-Future papers will cover:
-
-1. Axis Core Language Specification  
-2. Immutable Contract Registry  
-3. Cross-Language Bridging Architecture  
-4. Axis Web Semantics  
-5. Axis OS & Infrastructure Semantics  
-6. Axis DB  
-7. AI Reasoning Model for Axis  
+All of that is *possible*, not promised. It’s the direction the design is pointing, not a claim about what Axis does today.
 
 ---
 
-# 🔬 4. Early Language Specification (Prototype)
+### Bridges are where the hard work lives
 
-Axis includes a prototype declarative language used to explore the minimal semantics:
+A big part of this design is pushing all the messy, real-world complexity down into **bridges**: I/O, floats, OS behaviour, concurrency, GPU work, etc.
 
-➡️ **[`spec/axis-language-core-0.5.md`](spec/axis-language-core-0.5.md)**
-➡️ **[`spec/axis-language-surface-0.5.md`](spec/axis-language-surface-0.5.md)**
+That doesn’t make the hard parts go away. If anything, it highlights them:
 
-This draft includes:
+* Bridges will be hard to get right.
+* They will need careful design and a lot of testing.
+* We’re not pretending this layer is easy or solved.
 
-* syntax  
-* expression forms  
-* types  
-* evaluation model  
-* examples  
-* design rationale  
+What the architecture *does* try to do is **shrink the surface area of the pain**:
 
-It is exploratory and will evolve as the semantic substrate stabilizes.
+* Instead of re-solving the same ugly problems in every language, framework and library,
+* We solve them once (per platform) in a bridge,
+* And everything built on top can rely on that work.
 
----
-
-# 🧪 5. Status
-
-Axis is **early-stage research**.
-
-Current focus:
-
-- clarifying core semantics  
-- refining the AI–human co-design loop  
-- stabilizing the minimal language  
-- articulating the long-term semantic architecture  
-
-Feedback from researchers in PL, AI reasoning, formal methods, and systems design is highly welcome.
+So this is not “free complexity reduction”. It’s: *do the hard work once, in one place, then reuse it everywhere*.
 
 ---
 
-# 🔮 6. Long-Term Vision
+### Where we are right now
 
-Axis aims to provide AI systems with:
+Right now, Axis is:
 
-- a stable, deterministic language of thought  
-- a universal vocabulary of permanent functions  
-- a reproducible semantic substrate beneath all programming languages  
-- a consistent cross-language execution model  
+* a design for a small semantic core
+* a sketch of an immutable function registry
+* a bridging approach for plugging into real runtimes
+* a bunch of notes and examples
 
-Future directions include:
+We don’t have:
 
-- contract registry  
-- bridging to multiple runtimes  
-- web semantics  
-- OS and infrastructure semantics  
-- deterministic distributed systems  
-- semantic databases  
+* a full compiler yet
+* production-quality bridges
+* proof that the whole stack works end-to-end
 
-These areas remain exploratory and open.
+The next concrete steps are pretty simple:
 
----
+1. Finish nailing down the core language.
+2. Build a first compiler / interpreter (targeting Python to start with).
+3. Implement a minimal bridge.
+4. Run real examples through it and see what survives contact with reality.
+5. Adjust the theory based on what actually works.
 
-# 🚫 7. Out of Scope for v0.4.x
+So we’re not asking anyone to wait for some future breakthrough. The underlying ideas are all things we can start testing now.
 
-The early specification intentionally excludes:
-
-- runtime behaviour  
-- host-language integration  
-- tooling and compilers  
-- verification frameworks  
-- optimizations  
-
-The goal is to stabilize the semantics before moving outward.
-
----
-
-# 🤝 8. Feedback & Discussion
-
-Thoughtful critique and conceptual discussion are far more valuable than implementation work at this stage.
-
-Please open an issue or start a discussion if you have:
-
-- questions  
-- suggestions  
-- critiques  
-- interest in collaboration  
-
----
-
-# 📜 License
-
-MIT License. See `LICENSE` file for details.
+If this stuff interests you, the best thing to do is watch the repo as the first compiler and bridge land, and see how close reality comes to the theory.

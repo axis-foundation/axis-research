@@ -1,7 +1,7 @@
 ```text
 ┌───────────────────────────────────────────────────────────────┐
 │                         SURFACE LAYERS                        │
-│ (Python, Rust, JS, SQL, CSS, UI logic, config, workflows...) │
+│ (Python, Rust, JS, SQL, CSS, UI logic, config, workflows...)  │
 │                                                               │
 │ • Human-friendly syntax                                       │
 │ • Frameworks, libraries, domains                              │
@@ -16,7 +16,7 @@
 │        (The minimal meta-language: pure, explicit, stable)    │
 │                                                               │
 │ • Immutable data structures                                   │
-│ • Pure functions                                               │
+│ • Pure functions                                              │
 │ • Branching and composition                                   │
 │ • No loops, no mutation, no hidden behaviour                  │
 │ • Uniform representation for ALL domains                      │
@@ -32,11 +32,11 @@
 │                      BRIDGE LAYERS                            │
 │     (Runtime integration: Python, Rust, OS, DB, GPU, etc.)    │
 │                                                               │
-│ • Handles IO, files, sockets                                   │
-│ • Handles floats, number semantics                             │
-│ • Handles concurrency, blocking, async                         │
-│ • Calls out to OS, GPU, DB engines                             │
-│ • Implements foreign functions in real systems                 │
+│ • Handles IO, files, sockets                                  │
+│ • Handles floats, number semantics                            │
+│ • Handles concurrency, blocking, async                        │
+│ • Calls out to OS, GPU, DB engines                            │
+│ • Implements foreign functions in real systems                │
 │                                                               │
 │ THIS IS WHERE THE HARD WORK LIVES.                            │
 │                                                               │

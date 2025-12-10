@@ -1,3 +1,4 @@
+```text
 ┌───────────────────────────────────────────────────────────────┐
 │                         SURFACE LAYERS                        │
 │ (Python, Rust, JS, SQL, CSS, UI logic, config, workflows...) │
@@ -43,7 +44,7 @@
 │ We solve hard problems ONCE per platform, not in every library│
 └───────────────────────────────────────────────────────────────┘
 # Axis: A Universal Semantic Core
-
+```
 
 ### Where this might go (and where it actually is)
 
